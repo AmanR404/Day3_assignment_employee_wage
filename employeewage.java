@@ -3,11 +3,14 @@ public class employeewage {
         
         final int PartTime=1;
         final int FullTime=2;
-            int employeeCheck=(int) (Math.random() * 10)%3;
         final int wagePerHrs=20;
-            int workingHrs=0;
-            
-                
+        final int workingDays=20;		
+            int totalwage =0;
+            for(int day=1; day<=workingDays;day++)
+            {
+                int employeeCheck=(int) (Math.random() * 10)%3;
+                int workingHrs=0;
+                    
             switch(employeeCheck) 
             {
             case FullTime:
@@ -23,5 +26,9 @@ public class employeewage {
             }
             int employeeWage = workingHrs*wagePerHrs;
             System.out.println("Employee Daily wages is as per working hour " + employeeWage);
-        }
-        }
+            totalwage = totalwage+employeeWage;
+            }
+            System.out.println("Wage for a month "+ totalwage);
+    }
+    
+    }
